@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(210, 60%, 98%);
+}
+
+.wrapper {
+    background: white;
+    height: 850px;
+    width: 760px;
+    max-width: 100%;
+    border-radius: 15px;
+    padding: 40px 35px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.notifications {
+    color: hsl(224, 21%, 14%);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.notifications span {
+    margin-left: 10px;
+    display: inline-block;
+    padding: 3px 13px;
+    border-radius: 6px;
+    font-size: 16px;
+    background: hsl(219, 85%, 26%);
+    color: white;
+}
+
+.mark {
+    color: hsl(219, 12%, 42%);
+}
+
+.mark:hover, .post:hover, .name:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.noti {
+    margin-bottom: 10px;
+    padding: 13px 25px;
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    border-radius: 10px;
+    color: hsl(219, 12%, 42%);
+}
+
+.pic {
+    grid-template-columns: 65px 1fr auto;
+}
+
+.name {
+    font-weight: 800;
+    margin-right: 5px;
+    color: hsl(224, 21%, 14%);
+}
+
+.post {
+    font-weight: 800;
+}
+
+.group {
+    font-weight: 800;
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.post, .group, .unseen .info .text::after {
+    margin-left: 5px;
+}
+
+.time {
+    margin: 5px 0;
+    color: hsl(219, 14%, 63%);
+}
+
+.msg {
+    padding: 20px;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 10px;
+}
+
+.msg:hover {
+    background: hsl(211, 68%, 94%);
+    cursor: pointer;
+}
+
+.postPic {
+    cursor: pointer;
+}
+
+.unseen {
+    background: hsl(210, 60%, 98%);
+}
+
+.unseen .info .text::after {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: hsl(1, 90%, 64%);
+    border-radius: 50%;
+}
+
+img {
+    width: 45px;
+}
+
+.attribution { 
+    text-align: center;
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    transition: .2s;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body:hover .attribution, .attribution:hover {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: block;
+        font-size: 14px;
+    }
+
+    .wrapper {
+        padding: 15px;
+        height: 100%;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+
+    .notifications {
+        font-size: 20px;
+    }
+
+    .noti {
+        padding: 15px;
+        grid-template-columns: 55px 1fr;
+    }
+
+    .pic {
+        grid-template-columns: 55px 1fr auto;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
